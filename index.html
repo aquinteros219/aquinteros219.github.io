@@ -13,13 +13,53 @@
 
 <h1>First Quiz</h1>
 
+<p>
+	<ul>
+		<li><a href="adventure.html">Click here for an adventure</a></li>
+	</ul>
+</p>
+
 <button onclick="firstfunction()">Click me</button>
+<button onclick="secondfunction()">Click me</button>
+<button onclick="smarterfunction(1)">Click me</button>
 
 	<script>
-	function firstfunction()  {
+function myFunctionName() {
+
+}
+
+
+function firstfunction() {
 		alert('hello function');
-	}
+
+}
+
+function secondfunction() {
+		alert('this is 2nd function');
+
+}
+
+function smarterfunction(value){
+switch(value) {
+		case 0:
+			console.log('a hike');
+			break;
+		case 1:
+			console.log('netflix');
+			break;
+		case 2:
+			console.log('wine');
+			break;
+				}
+}
+
+
 	</script>
+
+
+
+
+
 </body>
 
 </html>

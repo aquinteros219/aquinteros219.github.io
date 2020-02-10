@@ -1,0 +1,28 @@
+var numvar = 0;
+
+var stringVar = "my string 0000";
+
+var firstboolean = true;
+
+Null myNullVar = mill
+
+undefined
+
+Arrays
+
+var myArray = ['orange', 'apple', banana'];
+
++ add
+- subtract
+/ divide
+* multiple
+modulus
+== equal to
+!= not equal to
+> greater than
+< less than
+>= greater than / equal to
+<= lesser than / equal to
+
+
+var myVariable;
