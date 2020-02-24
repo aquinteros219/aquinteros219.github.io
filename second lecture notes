@@ -26,3 +26,29 @@ modulus
 
 
 var myVariable;
+
+//if apple
+	text = This is an apple's color
+	color = #ff0800
+
+else banana
+	text = This is a banana's color
+	color = #ffe135
+
+else orange
+	text = This is an orange's color
+	color = #ffa500
+
+else blueberry
+	text = This is a blueberry's color
+	color = #4f86f7
+
+else grape
+	text = This is a grape's color
+	color = #6f2da8
+
+else kiwi
+	text = This is a kiwi's color
+	color = #9bbc88
+
+document.body.style.backgroundColor

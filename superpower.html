@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What's Your Superpower?</title>
+	<meta charset='uti-8'>
+
+	<style>
+		body {background-color: #EEEEEE;}
+	</style>
+
+</head>
+
+<body>
+
+<h1>What Is Your Superpower?</h1>
+<p>Click this button to open up the text prompt</p>
+<button onclick="myFunction()">Right Here!</button>
+
+<p id="results"></p>
+
+<script>
+
+function myFunction() {
+var input;
+var birthMonth = prompt("Enter your birth month (capitalize the first letter)");
+switch(birthMonth) {
+  case "January":
+    input = "Your power is 'Super Intelligence'! Your level of knowledge and wisdom is unrivaled!";
+    break;
+  case "February":
+    input = "Your power is 'Future Sight'! You can see well into the future.";
+    break;
+  case "March":
+    input = "Your power is 'Earthquake Generation'! A world changing superpower! Destruction is well within your grasp. Just be careful with it though.";
+    break;
+  case "April":
+    input = "Your power is 'Super Speed'! You wanna see me run to that rock and back...? You wanna see me do it again?";
+    break;
+  case "May":
+    input = "Your power is 'Super Strength'! No one will want to mess with you!";
+    break;
+  case "June":
+    input = "Your power is 'Time Freeze'! Need time to relax, but can't fit it in your schedule? Just stop time and everything around you will remain static!";
+    break;
+  case "July":
+    input = "Your power is 'Flame Bending'! You are one with fire. You can create and manipulate flames at will.";
+    break;
+  case "August":
+    input = "Your power is 'Shape Shifting'! You can turn into literally anything or any being you want";
+    break;
+  case "September":
+    input = "Your power is 'Animal Communication'! Now you can converse with your pet!";
+    break;
+  case "October":
+    input = "Your power is 'Lightning Summoning'! Even Zeus would bow before you! With a snap of a finger, you can have bolts of lightning come down from the sky!";
+    break;
+  case "November":
+    input = "Your power is 'Invisibility'! Imagine the possibilities...";
+    break;
+  case "December":
+    input = "Your power is 'Teleportation'! Forget the subway! You can get to places in an instant!";
+    break;
+  default:
+    input = "Invalid entry. I can only assume you're basic.";
+    break;
+}
+
+document.getElementById("results").innerHTML = input;
+
+}
+
+</script>
+
+<p>
+	<ul>
+		<li><a href="index.html">Go back home</a></li>
+	</ul>
+</p>
+
+</body>
+
+</html>
