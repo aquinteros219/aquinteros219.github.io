@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Canvas</title>
+	<meta charset='uti-8'>
+
+	<style>
+		body {
+				background-color: red;
+			 }
+
+		canvas {
+				border: 1px solid black;
+			   }
+    </style>
+
+</head>
+
+<body>
+
+<canvas id="acanvas" height="400" width="400"></canvas>
+
+<script>
+
+var canvas = document.getElementByID("acanvas");
+var ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(400,400);
+ctx.stroke();
+
+ctx.fillRect(25,25,100,100);
+ctx.clearRect(45,45,60,60);
+
+</script>
+
+</body>
+
+</html>
