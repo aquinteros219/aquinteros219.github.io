@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change the fruit</title>
+	<meta charset='uti-8'>
+
+	<style>
+		body {background-color: #ff0800;}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Fruit Changer</h1>
+
+<button onclick='colorFruit()'>Change Fruit</button>
+
+<p id = "idApple" style =  
+        "font-size: 36px; color: white;">  
+    </p>
+
+<script>
+
+
+var redApple = document.getElementById('idApple');
+var fruit = ['apple', 'banana', 'orange', 'blueberry', 'grape', 'kiwi']
+
+function colorFruit () 
+	{
+			redApple.innerHTML =
+			fruit[Math.floor(Math.random() * fruit.length)];
+
+	}
+
+</script>
+
+<p>
+	<ul>
+		<li><a href="index.html">Go back home</a></li>
+	</ul>
+</p>
+
+</body>
+
+
+</html>
+
+
