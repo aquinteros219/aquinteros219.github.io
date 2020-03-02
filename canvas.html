@@ -18,12 +18,22 @@
 
 <body>
 
+<style>
+h1 {text-align:center;}
+p {text-align:center;}
+</style>
+
+<h1>Web Design II</h1>
+<p>A website by: Alexis Quinteros</p>
+
+<hr>
+
 <canvas id="acanvas" height="400" width="400"></canvas>
 
 <script>
 
-var canvas = document.getElementByID("acanvas");
-var ctx = canvas.getContext("2d");
+var canvas = document.getElementById("acanvas");
+var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.moveTo(0,0);
@@ -32,8 +42,82 @@ ctx.stroke();
 
 ctx.fillRect(25,25,100,100);
 ctx.clearRect(45,45,60,60);
+ctx.strokeRect(50,50,50,50);
+
+var lineObj = {
+	startX: 10,
+	startY: 0,
+	finishX: 10,
+	finishY: 400,
+	drawLine: function(){
+		this.ctx.beginPath();
+		this.ctx.moveTo(this.startX,this.startY);
+		this.ctx.lineTo(this.finishX, this.finishY);
+		this.ctx.stroke();
+	}
+}
+
+lineObj.drawLine();
+
+//object constructor
+
+function createdLineObj(startX, startY, finishX, finishY, context) {
+	this.startX = startX;
+	this.startY = startY;
+	this.finishX = finishX;
+	this.finishY = finishY;
+	this.context = context;
+	this.drawLine = function (){
+		this.context.beginPath();
+		this.context.moveTo(this.startX,thisstartY);
+		this.context.lineTo(this.finishX, this.finishY);
+		this.context.stroke();
+
+	}
+
+
+}
+
+line1 = new createLineObj(15,0,15,400,ctx);
+console.log(line1)
+line1.drawline();
+
+//var hairLength = ['long', 'short', 'medium']
+//var hairColor = ['black', 'brown', 'blonde']
+
+//var guy = {
+	//name: 'Alex'
+	//hairColor: 'black',
+	//hairLength: 'short',
+	//age: 22,
+	//type: 'straight',
+	//notice: function() {
+		//alert(this.hairColor)
+	//}
+//}
+
+//var guy = {
+	//name: 'John',
+	//hairColor: 'brown',
+	//hairLength: 'long',
+	//age: 25,
+	//type: 'curly',
+	//notice: function(){
+		//alert('hello');
+	//}
+//}
+
+
+//guy.notice();
+//alert(guy.hairColor);
 
 </script>
+
+<p>
+	<ul>
+		<li><a href="index.html">Go back home</a></li>
+	</ul>
+</p>
 
 </body>
 
