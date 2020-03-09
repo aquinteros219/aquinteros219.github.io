@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
 <style>
 h1 {text-align:center;}
 p {text-align:center;}
@@ -33,9 +32,8 @@ p {text-align:center;}
 <canvas id="acanvas" height="400" width="400"></canvas>
 
 <script>
-
-var canvas = document.getElementById("acanvas");
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementByID("acanvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(0,0);
