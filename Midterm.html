@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Midterm Game</title>
+	<meta charset='uti-8'>
+</head>
+<body>
+
+<style>
+h1 {text-align:center;}
+p {text-align:center;}
+</style>
+
+<h1>Web Design II</h1>
+<p>A website by: Alexis Quinteros</p>
+
+<hr>
+
+<canvas id= "canvas" style="border:1px solid #000"></canvas>
+
+<script>
+	(function () {
+		var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+		window.requestAnimationFrame = requestAnimationFrame;
+	}) ();
+
+	var canvas = document.getElementById("canvas"),
+		ctx = canvas.getContext("2d"),
+		width = 1000,
+		height = 400,
+		player = {
+			x: width/2,
+			y: height - 20,
+			width: 20,
+			height: 20,
+			speed: 3,
+			velX: 0,
+			velY: 0,
+			jumping: false
+		},
+		controls = [],
+		friction = 0.7;
+		gravity = 0.15;
+
+	canvas.width = width;
+	canvas.height = height;
+
+function reload() {
+	if (controls[38]) {
+		//up
+		if(!player.jumping) {
+			player.jumping = true;
+			player.velY = -player.speed*2;
+		}
+	}
+	if (controls[39]) {
+		//right
+		if (player.velX < player.speed) {
+			player.velX++;
+		}
+	}
+	if (controls[37]) {
+		//left
+		if (player.velX > -player.speed) {
+			player.velX--;
+		}
+	}
+
+	player.velX *= friction;
+
+	player.velY += gravity;
+
+	player.x += player.velX;
+	player.y += player.velY;
+
+	if (player.x >= width-player.width){
+		player.x = width-player.width;
+	} else if (player.x <= 0) {
+		player.x = 0;
+	}
+	if (player.y >= height-player.height) {
+		player.y = height-player.height;
+		player.jumping = false;
+	}
+
+	ctx.clearRect (0,0,width,height);
+	ctx.fillStyle = "green";
+	ctx.fillRect (player.x, player.y, player.width, player.height);
+	requestAnimationFrame (reload);
+}
+
+document.body.addEventListener("keydown", function(e) {
+		controls[e.keyCode] = true;
+});
+
+document.body.addEventListener("keyup", function(e) {
+	controls[e.keyCode] = false;
+});
+
+	window.addEventListener("load", function () {
+		reload();
+	});
+</script>
+</body>
+</html>
