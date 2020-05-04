@@ -1,0 +1,17 @@
+dog = $.get("https://dog.cero/api/breeds/image/random",
+	function(data, status){
+	if (status == 'success') {
+		showDog(data);
+	}
+	else {
+		alert('no success');
+	}
+	});
+
+function showDog(data){
+	url = data.message;
+	img = "<img src= '" + url + "'>";
+	console.log(img);
+	$('#content').append(img);
+	
+}

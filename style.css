@@ -1,0 +1,13 @@
+body {
+	background-color: crimson;
+}
+
+.header{
+	text-align: center;
+}
+
+.schtuff {
+	text-align: center;
+	border: 3px solid white;
+	background-color: white;
+}
