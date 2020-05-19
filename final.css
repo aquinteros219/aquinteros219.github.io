@@ -1,0 +1,32 @@
+#header{
+	text-align: center;
+	color: black;
+	margin-top: 20px;
+}
+
+#subHeader{
+	text-align: center;
+}
+
+.container{
+	margin: 10px;
+}
+
+button {
+	width: 100%;
+	background-color: #dc143c;
+	border: 1px solid black;
+}
+
+#question{
+	background-color: #fafafa;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+#answer
+{
+	display: none;
+}
