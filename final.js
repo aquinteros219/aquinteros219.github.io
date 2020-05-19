@@ -18,7 +18,7 @@ questionButton.addEventListener('click', function(){
     const question = data[0].question; 
     const category = data[0].category.title;
     document.getElementById("question").innerHTML = question;
-    document.getElementById("category").innerHTML = "<h3>Your category is: " + category + "</h3>";
+    document.getElementById("category").innerHTML = "<h3>Your ccategory is: " + category + "</h3>";
     document.getElementById("answer").style.display = "block";
     document.getElementById("displayAnswer").addEventListener('click', function(){
     document.getElementById("answer").innerHTML = answer;
