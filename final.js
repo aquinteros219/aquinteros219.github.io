@@ -4,7 +4,7 @@ let answer = "";
 questionButton.addEventListener('click', function(){ 
 	document.getElementById("answer").innerHTML = "<button id='displayAnswer'>Display Answer</button></div>";
 		//fetches the data from the jservice API, lines of code from google documentation
-		fetch('http://jservice.io/api/random')
+		fetch('https://jservice.io/api/random')
   			.then(
    				function(response) {
      	 			if (response.status !== 200) {
