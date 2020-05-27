@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-quiv="content-type" content="text/html; charset=uti-8" />
+	<title>Big Music club</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+	$('document').ready(function() {
+		$("#accordion").accordion();
+		});
+</script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+<body>
+
+<div id="accordion">
+	<h3>Next Event</h3>
+		<div>
+		<p>
+			Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut
+		</p>
+		</div>
+	<h3>Big Hall</h3>
+		<div>
+		<p>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+		</p>
+		<ul id="bhEvents"></ul>
+		</div>
+	<h3>Little Café</h3>
+		<div>
+		<p>
+		Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+		</p>
+		<ul id="cafeEvents"></ul>
+		</div>
+	<h3>Smokey Club</h3>
+		<div>
+		<p>
+		Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus
+		</p>
+		<ul id="smokeyEvents"></ul>
+		</div>
+</div>
+
+<script>
+
+$('p').click(function() {
+});
+
+$('p').click(function()
+{
+	alert('clicked the P tag')
+});
+
+	var bhEvents = [
+	{
+		"artist" : "Drake",
+		"venue": "Big Hall",
+		"date": "2019-12-20",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"22:00",
+		"price":"40",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Lady Gaga",
+		"venue": "Big Hall",
+		"date": "2020-02-10",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"30",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Pixies",
+		"venue": "Big Hall",
+		"date": "2020-02-05",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "James Brown",
+		"venue": "Big Hall",
+		"date": "2019-12-12",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Stevie Wonder",
+		"venue": "Big Hall",
+		"date": "2020-03-17",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "The Who",
+		"venue": "Big Hall",
+		"date": "2019-11-18",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Leon Bridges",
+		"venue": "Big Hall",
+		"date": "2020-03-16",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Shawn Mendes",
+		"venue": "Big Hall",
+		"date": "2020-04-01",
+		"city": "New York",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	}];
+
+	var cafeEvents = [
+	{
+		"artist" : "Madonna",
+		"venue": "Little Café",
+		"date": "2020-03-25",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"20:30",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Kendrick Lamar",
+		"venue": "Little Café",
+		"date": "2019-12-05",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Rihanna",
+		"venue": "Little Café",
+		"date": "2019-11-24",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Cardi B",
+		"venue": "Little Café",
+		"date": "2019-12-18",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Bob Dylan",
+		"venue": "Little Café",
+		"date": "2020-02-11",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "OutKast",
+		"venue": "Little Café",
+		"date": "2020-01-13",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Adele",
+		"venue": "Little Café",
+		"date": "2020-03-28",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "LCD Soundsystem",
+		"venue": "Little Café",
+		"date": "2020-01-28",
+		"city": "Brooklyn",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	}];
+
+	var smokeyEvents = [
+	{
+		"artist" : "Bjork",
+		"venue": "Smokey Club",
+		"date": "2020-03-28",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"40",
+		"currency": "USD"
+	},
+	{
+		"artist" : "David Bowie",
+		"venue": "Smokey Club",
+		"date": "2020-01-12",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Beyonce",
+		"venue": "Smokey Club",
+		"date": "2020-01-14",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+	{
+		"artist" : "Etta James",
+		"venue": "Smokey Club",
+		"date": "2020-02-14",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+		{
+		"artist" : "Ariana Grande",
+		"venue": "Smokey Club",
+		"date": "2019-12-22",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+		{
+		"artist" : "Ramones",
+		"venue": "Smokey Club",
+		"date": "2019-11-30",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+		{
+		"artist" : "Lizzo",
+		"venue": "Smokey Club",
+		"date": "2019-12-7",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	},
+		{
+		"artist" : "The Smiths",
+		"venue": "Smokey Club",
+		"date": "2020-01-19",
+		"city": "Queens",
+		"state": "NY",
+		"show_time":"21:00",
+		"price":"45",
+		"currency": "USD"
+	}];
+
+	var output = '';
+	for(var i = 0; i < bhEvents.length; i++){
+		output += '<li>'+bhEvents[i].artist+'<br>'+bhEvents[i].date+'<br>'+bhEvents[i].city+'<br>'+bhEvents[i].state+'<br>'+bhEvents[i].show_time+'<br>'+bhEvents[i].price+'<br>'+bhEvents[i].currency+'</li>';
+	}
+	document.getElementById('bhEvents').innerHTML = output;
+
+	var opTwo = '';
+	for(var i = 0; i < cafeEvents.length; i++){
+		opTwo += '<li>'+cafeEvents[i].artist+'<br>'+cafeEvents[i].date+'<br>'+cafeEvents[i].city+'<br>'+cafeEvents[i].state+'<br>'+cafeEvents[i].show_time+'<br>'+cafeEvents[i].price+'<br>'+cafeEvents[i].currency+'</li>';
+	}
+	document.getElementById('cafeEvents').innerHTML = opTwo;
+
+	var opThree = '';
+	for(var i = 0; i < smokeyEvents.length; i++){
+		opThree += '<li>'+smokeyEvents[i].artist+'<br>'+smokeyEvents[i].date+'<br>'+smokeyEvents[i].city+'<br>'+smokeyEvents[i].state+'<br>'+smokeyEvents[i].show_time+'<br>'+smokeyEvents[i].price+'<br>'+smokeyEvents[i].currency+'</li>';
+	}
+	document.getElementById('smokeyEvents').innerHTML = opThree;
+
+
+
+
+</script>
+</body>
+</html>
